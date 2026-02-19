@@ -1,6 +1,8 @@
 - name: install pip
   dnf:
-    name: python-pip
+    name: 
+      - python-pip
+      - python3-devel
     state: present
 
 - name: pip install docker-py
