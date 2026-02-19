@@ -1,5 +1,5 @@
 - name: install pip
-  apt:
+  dnf:
     name: python-pip
     state: present
 
