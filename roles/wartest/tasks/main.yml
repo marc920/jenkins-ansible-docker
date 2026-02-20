@@ -9,18 +9,12 @@
     state: latest
     disable_gpg_check: yes
 
-- name: uninstall PyYAML
-  rmp:
-    name: PyYAML 
-    state: absent
-
 - name: pip upgrade
   pip:
     name:
       - pip
       - setuptools
       - wheel
-      - PyYAML 
     extra_args: --upgrade
 
 - name: pip install docker
@@ -28,9 +22,7 @@
     name:
       - docker
       - docker-compose
-    state: latest
-    extra_args: -v
-
+    state: present
 
 - name: run container
   docker_container:
