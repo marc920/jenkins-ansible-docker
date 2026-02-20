@@ -6,6 +6,13 @@
     state: present
     disable_gpg_check: yes
 
+- name: pip upgrade
+  pip --upgrade:
+    name:
+      - pip
+      - setuptools
+      - wheel
+
 - name: pip install docker-py
   pip:
     name:
