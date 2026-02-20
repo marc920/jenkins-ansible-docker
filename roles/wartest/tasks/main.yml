@@ -17,16 +17,20 @@
       - wheel
     extra_args: --upgrade
 
-- name: Remove pyyaml RPM packages
+- name: Downgrade pyyaml RPM packages
   yum:
     name: pyyaml==6.0.1
     state: absent
+
+- name: pip install pyYAML
+  pip:
+    name: pyyaml==5.3.1
+    state: present
 
 - name: pip install docker
   pip:
     name:
       - docker
-      - pyyaml==5.3.1
       - docker-compose
     state: present
 
