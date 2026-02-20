@@ -1,19 +1,5 @@
-- name: install pip
+- name: install docker
   dnf:
-    name: python-pip
-    state: latest
-    disable_gpg_check: yes
-
-- name: pip upgrade
-  pip:
-    name:
-      - pip
-      - setuptools
-      - wheel
-    extra_args: --upgrade
-
-- name: pip install docker-py
-  pip:
     name:
       - docker
       - docker-compose
