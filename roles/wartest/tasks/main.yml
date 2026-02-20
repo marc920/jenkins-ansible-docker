@@ -1,3 +1,8 @@
+- name: install python
+  dnf:
+    name: python
+    state: latest
+
 - name: install pip
   dnf:
     name: python-pip
