@@ -21,6 +21,7 @@
   pip:
     name:
       - docker
+      - pyyaml==5.3.1
       - docker-compose
     state: present
 
