@@ -18,8 +18,8 @@
     extra_args: --upgrade
 
 - name: Remove specific RPM packages
-  yum:
-    name: pyyaml
+  rpm:
+    name: pyyaml==6.0.1
     state: absent
 
 - name: pip install docker
