@@ -15,6 +15,7 @@
       - pip
       - setuptools
       - wheel
+      - pyyaml
     extra_args: --upgrade
 
 - name: pip install docker
