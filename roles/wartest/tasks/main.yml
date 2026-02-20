@@ -1,9 +1,25 @@
-- name: install docker
+- name: install pip
   dnf:
+    name: python-pip
+    state: latest
+    disable_gpg_check: yes
+
+- name: pip upgrade
+  pip:
+    name:
+      - pip
+      - setuptools
+      - wheel
+    extra_args: --upgrade
+
+- name: pip install docker
+  pip:
     name:
       - docker
       - docker-compose
     state: latest
+    extra_args: -v
+
 
 - name: run container
   docker_container:
