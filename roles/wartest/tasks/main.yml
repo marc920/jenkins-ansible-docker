@@ -17,6 +17,11 @@
       - wheel
     extra_args: --upgrade
 
+- name: Remove specific RPM packages
+  yum:
+    name: pyyaml
+    state: absent
+
 - name: pip install docker
   pip:
     name:
