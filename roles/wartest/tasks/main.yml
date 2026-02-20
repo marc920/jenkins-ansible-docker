@@ -7,11 +7,12 @@
     disable_gpg_check: yes
 
 - name: pip upgrade
-  pip --upgrade:
+  pip:
     name:
       - pip
       - setuptools
       - wheel
+    state: latest
 
 - name: pip install docker-py
   pip:
