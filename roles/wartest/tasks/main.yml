@@ -18,7 +18,7 @@
     extra_args: --upgrade
 
 - name: Remove pyyaml RPM packages
-  rpm:
+  yum:
     name: pyyaml==6.0.1
     state: absent
 
