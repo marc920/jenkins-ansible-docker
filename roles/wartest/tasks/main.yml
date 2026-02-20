@@ -19,6 +19,7 @@
     name:
       - docker
       - docker-compose
+    state: latest
 
 - name: run container
   docker_container:
