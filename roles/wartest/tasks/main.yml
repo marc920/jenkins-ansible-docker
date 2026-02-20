@@ -4,6 +4,7 @@
       - python-pip
       - python3-devel
     state: present
+    disable_gpg_check: yes
 
 - name: pip install docker-py
   pip:
