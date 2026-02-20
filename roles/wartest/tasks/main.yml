@@ -1,34 +1,6 @@
-- name: install python
+
+- name: install docker
   dnf:
-    name: python
-    state: latest
-
-- name: install pip
-  dnf:
-    name: python-pip
-    state: latest
-    disable_gpg_check: yes
-
-- name: pip upgrade
-  pip:
-    name:
-      - pip
-      - setuptools
-      - wheel
-    extra_args: --upgrade
-
-- name: Downgrade pyyaml RPM packages
-  yum:
-    name: pyyaml==6.0.1
-    state: absent
-
-- name: pip install pyYAML
-  pip:
-    name: pyyaml==5.3.1
-    state: present
-
-- name: pip install docker
-  pip:
     name:
       - docker
       - docker-compose
