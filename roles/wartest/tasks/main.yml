@@ -1,9 +1,7 @@
 - name: install pip
   dnf:
-    name: 
-      - python-pip
-      - python3-devel
-    state: present
+    name: python-pip
+    state: latest
     disable_gpg_check: yes
 
 - name: pip upgrade
@@ -12,7 +10,7 @@
       - pip
       - setuptools
       - wheel
-    state: latest
+    extra_args: --upgrade
 
 - name: pip install docker-py
   pip:
