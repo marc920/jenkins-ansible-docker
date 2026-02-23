@@ -1,3 +1,10 @@
+- name: Log into private registry and force re-authorization
+  docker_login:
+    registry: registry.gitlab.com/marc920-group/wartest
+    username: WhiteWolf
+    password: glpat-O4y8O_ctpMoZ259ZOWqdmm86MQp1OmttanVoCw.01.121un3tva
+    reauthorize: yes
+
 - name: run container
   docker_container:
     name: wartest
