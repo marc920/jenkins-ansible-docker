@@ -1,9 +1,4 @@
 
-- name: run shell command for Gitlab authentication
-  shell: "echo 'MRgithub6726!!' | docker login registry.gitlab.com -u 'WhiteWolf' -password-stdin"
-  register: login_result
-  ignore_errors: yes
-
 - name: run container
   docker_container:
     name: wartest
