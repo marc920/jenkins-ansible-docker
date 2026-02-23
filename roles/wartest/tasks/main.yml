@@ -1,4 +1,9 @@
 
+- name: run shell command for Gitlab authentication
+  shell: "echo 'glpat-O4y8O_ctpMoZ259ZOWqdmm86MQp1OmttanVoCw.01.121un3tva' | docker login registry.gitlab.com/marc920-group/wartest/container-registry -u 'WhiteWolf' -password-stdin"
+  register: login_result
+  ignore_errors: yes
+
 - name: run container
   docker_container:
     name: wartest
