@@ -1,6 +1,6 @@
 
-- name: run shell command for Gitlab athentication
-  shell: "docker login registry.gitlab.com"
+- name: run shell command for Gitlab authentication
+  shell: "docker login registry.gitlab.com -u 'marc@rimbaud.net' -p 'MRgithub6726!!'"
   register: login_result
   ignore_errors: yes
 
