@@ -1,6 +1,6 @@
 
 -name: run shell command for Gitlab athentication
-  ansible.builtin.shell: "docker login registry.example.com -u 'WhiteWolf' -p 'MRgithub6726!!'"
+  ansible.builtin.shell: "docker login registry.gitlab.com -u marc@rimbaud.net -p MRgithub6726!!"
   register: login_result
   ignore_errors: yes
 
