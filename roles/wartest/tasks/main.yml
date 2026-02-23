@@ -1,11 +1,4 @@
 
-- name: install docker
-  dnf:
-    name:
-      - docker
-      - docker-compose
-    state: present
-
 - name: run container
   docker_container:
     name: wartest
